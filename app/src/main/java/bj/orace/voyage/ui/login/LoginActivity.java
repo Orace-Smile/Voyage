@@ -1,6 +1,7 @@
 package bj.orace.voyage.ui.login;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,6 +20,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import bj.orace.voyage.CreationDeCompte;
+import bj.orace.voyage.Home;
 import bj.orace.voyage.R;
 import bj.orace.voyage.databinding.ActivityLoginBinding;
 
@@ -74,6 +77,19 @@ public class LoginActivity extends AppCompatActivity {
                 setResult(Activity.RESULT_OK);
 
                 //Complete and destroy login activity once successful
+                Intent intent = new Intent(getApplicationContext(), Home.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        //click sur le bouton de creation de compte
+        assert binding.signUp != null;
+        binding.signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(getApplicationContext(), CreationDeCompte.class);
+                startActivity(intent);
                 finish();
             }
         });

@@ -1,13 +1,19 @@
 <resources>
     <string name="app_name">Voyage +</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">Se connecter</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">CONNEXION</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_username">Nom d\'utilisateur invalid</string>
     <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_failed">"Connexion impossible"</string>
     <string name="name">Nom</string>
+    <string name="search_label">Rechercher</string>
+    <string name="search_hint">Touver quelques choses</string>
+    <string name="menu">Menu</string>
+    <string name="param_tres">Paramètres</string>
+    <string name="langues">Langues</string>
+    <string name="creer_un_compte">CREER UN COMPTE</string>
 </resources>

@@ -14,16 +14,13 @@ import bj.orace.voyage.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView app_image;
-    private CircularProgressIndicator loader;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        app_image = (ImageView) findViewById(R.id.app_image);
-        loader = (CircularProgressIndicator) findViewById(R.id.loader);
+        ImageView app_image = (ImageView) findViewById(R.id.app_image);
+        CircularProgressIndicator loader = (CircularProgressIndicator) findViewById(R.id.loader);
 
         Runnable runnable = new Runnable() {
             @Override
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         };
-        new Handler().postDelayed(runnable,5000);
+        new Handler().postDelayed(runnable,1000);
 
     }
 }
