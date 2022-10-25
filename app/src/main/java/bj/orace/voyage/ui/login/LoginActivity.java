@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
-
+    private Button signUp;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
+        signUp = binding.signUp;
         final EditText usernameEditText = (EditText) binding.username;
         final EditText passwordEditText = (EditText) binding.password;
         final Button loginButton = binding.login;
@@ -84,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //click sur le bouton de creation de compte
-        assert binding.signUp != null;
+
         binding.signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

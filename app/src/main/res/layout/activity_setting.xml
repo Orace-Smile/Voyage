@@ -47,6 +47,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/retour"
                     android:padding="10dp"
+                    android:tooltipText="Rechercher un truc"
+                    android:contextClickable="true"
                     android:layout_margin="10dp"
                     android:background="@drawable/background"/>
             </RelativeLayout>

@@ -3,6 +3,8 @@ package bj.orace.voyage;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import bj.orace.voyage.databinding.ActivityProfileBinding;
 

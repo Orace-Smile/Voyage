@@ -3,3 +3,26 @@ plugins {
     id 'com.android.application' version '7.3.0' apply false
     id 'com.android.library' version '7.3.0' apply false
 }
+//buildscript {
+//    repositories {
+//        google()
+//        jcenter()
+//    }
+//    dependencies {
+//        classpath "com.android.tools.build.gradle:4.1.1"
+//    }
+//}
+//
+//allprojects {
+//    repositories {
+//        google()
+//        jcenter()
+//        maven {
+//            url "https://jitpack.io"
+//        }
+//    }
+//}
+//
+//task clean(Delete){
+//    delete rootProject.buildDir
+//}

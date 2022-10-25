@@ -16,4 +16,11 @@
     <string name="param_tres">Paramètres</string>
     <string name="langues">Langues</string>
     <string name="creer_un_compte">CREER UN COMPTE</string>
+    <string name="subscribe_the_channel">subscribe_the_channel</string>
+    <string name="full_name">full_name</string>
+    <string name="Full_name">Full_name</string>
+    <string name="email">email</string>
+    <string name="phone_number">phone_number</string>
+    <string name="password">password</string>
+    <string name="update">update</string>
 </resources>

@@ -14,21 +14,38 @@ import bj.orace.voyage.databinding.ActivitySettingBinding;
 public class Setting extends AppCompatActivity {
 
     public ImageView retour;
-    public ActivitySettingBinding binding;
+//    public ActivitySettingBinding binding;
     protected  final int REQUEST_CODE = 1458;
-    public ActivityProfileBinding profileBinding;
+//    public ActivityProfileBinding profileBinding;
+    private ImageView editProfile;
+    private ImageView photoDeProfile;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivitySettingBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+//        binding = ActivitySettingBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_setting);
 
-        ImageView photoDeProfile = binding.profile;
-        ImageView editProfile = binding.editer;
+        photoDeProfile = (ImageView) findViewById(R.id.profile);
+        editProfile = (ImageView) findViewById(R.id.editer);
+        retour = (ImageView) findViewById(R.id.retour);
+
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        photoDeProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(getApplicationContext(),Profile.class);
+                startActivity(intent);
+            }
+        });
 
 
-        assert editProfile != null;
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
