@@ -23,4 +23,7 @@
     <string name="phone_number">phone_number</string>
     <string name="password">password</string>
     <string name="update">update</string>
+    <string name="favorites">Favoris</string>
+    <string name="restaut">Restaurants</string>
+    <string name="places">Places</string>
 </resources>

@@ -20,7 +20,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:padding="15dp"
-              android:src="@drawable/ic_baseline_arrow_back_2" />
+              android:src="@drawable/ic_baseline_arrow_back" />
       </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
