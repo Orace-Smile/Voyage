@@ -1,34 +1,36 @@
 package bj.orace.voyage;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import bj.orace.voyage.databinding.ActivityProfileBinding;
-import bj.orace.voyage.databinding.ActivitySettingBinding;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Setting extends AppCompatActivity {
 
     public ImageView retour;
-//    public ActivitySettingBinding binding;
     protected  final int REQUEST_CODE = 1458;
-//    public ActivityProfileBinding profileBinding;
-    private ImageView editProfile;
-    private ImageView photoDeProfile;
-    @SuppressLint("MissingInflatedId")
+    private ImageView editProfile,photoDeProfile,favoris,parametre;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        binding = ActivitySettingBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_setting);
-
+        favoris =  findViewById(R.id.favoris);
         photoDeProfile = (ImageView) findViewById(R.id.profile);
         editProfile = (ImageView) findViewById(R.id.editer);
         retour = (ImageView) findViewById(R.id.retour);
+        parametre = findViewById(R.id.param);
+
+        favoris.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Favoris.class));
+                finish();
+            }
+        });
+
 
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,20 +47,21 @@ public class Setting extends AppCompatActivity {
             }
         });
 
+        parametre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ParametreActivity.class));
+            }
+        });
+
 
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),EditionProfile.class);
-//                intent.putExtra("nom",profileBinding.nom.getText().toString());
-//                intent.putExtra("prenom",profileBinding.prenom.getText().toString());
                 startActivity(intent);
             }
         });
-
-
-
-
     }
 
 }

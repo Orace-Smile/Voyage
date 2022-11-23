@@ -1,16 +1,13 @@
 package bj.orace.voyage;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.ImageView;
 
-import com.google.android.material.progressindicator.CircularProgressIndicator;
+import androidx.appcompat.app.AppCompatActivity;
 
-import bj.orace.voyage.ui.login.LoginActivity;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 
 public class MainActivity extends AppCompatActivity {
 

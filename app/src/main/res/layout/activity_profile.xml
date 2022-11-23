@@ -37,7 +37,7 @@
                 android:id="@+id/textview_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mickey Mouse"
+                android:text="User Name"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/image_profile"
@@ -64,7 +64,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edittext_email"
+
                 android:hint="@string/email"
                 android:layout_marginBottom="10dp">
                 <com.google.android.material.textfield.TextInputEditText
@@ -72,7 +72,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_baseline_person_24"
                     android:drawablePadding="10dp"
-                    android:text="Fullnameuser"/>
+                    android:text="Fullnameuser"
+                    android:id="@+id/edittext_email" />
                  </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -80,7 +81,6 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edittext_name"
                 android:hint="@string/full_name"
                 android:layout_marginBottom="10dp">
                 <com.google.android.material.textfield.TextInputEditText
@@ -88,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_baseline_send_24"
                     android:drawablePadding="10dp"
+                    android:id="@+id/edittext_name"
                     android:text="Email"/>
             </com.google.android.material.textfield.TextInputLayout>
 

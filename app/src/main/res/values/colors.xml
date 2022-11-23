@@ -17,9 +17,15 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorToolbarStart">#EF2BEF</color>
     <color name="colorToolbarEnd">#FB26F0</color>
-    <color name="textColor">#880582</color>
+    <color name="SecondtextColor">#880582</color>
     <color name="pricipalColor">#ff760a</color>
     <color name="colorteal_200">#039DDA</color>
+    <color name="primaryColor">#12A058</color>
+    <color name="accentColor">#12A058</color>
+    <color name="primaryDarkColor">#12A058</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="itemTextColor">#707070</color>
+    <color name="transparentColor">#00FFFFFF</color>
 
 
 

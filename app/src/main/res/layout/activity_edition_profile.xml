@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:src="@drawable/ic_baseline_arrow_back"/>
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -53,7 +53,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="341dp"
@@ -93,14 +95,14 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/prenomInput"
+                android:id="@+id/emailInput"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:hint="Last Name"
+                android:hint="Email"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
                 app:endIconMode="clear_text"
@@ -109,10 +111,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:startIconDrawable="@drawable/ic_baseline_person_24">
+                app:startIconDrawable="@drawable/email_icon">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/prenom"
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLength="21" />
@@ -153,8 +155,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="0dp"
                 android:gravity="center"
-                android:text="@string/update" />
+                android:text="@string/update"/>
         </LinearLayout>
+    </ScrollView>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

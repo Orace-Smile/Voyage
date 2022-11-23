@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/page_0"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home"/>
+
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_favorite_24"
-        android:title="@string/favorites"/>
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="@string/places"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_store_24"
+        android:icon="@drawable/ic_baseline_restaurant_24"
         android:title="@string/restaut"/>
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="@string/places"/>
-
+        android:icon="@drawable/ic_baseline_night_shelter_24"
+        android:iconTint="@color/colorPrimary"
+        android:title="@string/hotel"/>
+    <item
+        android:id="@+id/page_4"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/favorites"/>
 </menu>

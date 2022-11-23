@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import bj.orace.voyage.databinding.ActivityMain2Binding;
-import bj.orace.voyage.ui.login.LoginActivity;
+//import bj.orace.voyage.databinding.ActivityMain2Binding;
+//import bj.orace.voyage.ui.login.LoginActivity;
 
 public class CreationDeCompte extends AppCompatActivity {
-    private ActivityMain2Binding binding;
+    /*private ActivityMain2Binding binding;
 
 
     @Override
@@ -39,5 +39,5 @@ public class CreationDeCompte extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 }
