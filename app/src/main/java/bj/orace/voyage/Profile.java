@@ -52,7 +52,7 @@ public class Profile extends AppCompatActivity {
         getUserData();
     }
 
-//    SignUpActivity signUpActivity = new SignUpActivity();
+
     private void getUserData(){
         DatabaseReference databaseReference = FirebaseDatabase
                 .getInstance().getReference("Users")

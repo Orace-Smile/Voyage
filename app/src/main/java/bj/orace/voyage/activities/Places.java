@@ -1,6 +1,5 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,25 +9,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Favoris extends AppCompatActivity {
+import bj.orace.voyage.R;
+
+public class Places extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favoris);
+        setContentView(R.layout.activity_places);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.page_4);
 
-        // TODO: 26/10/2022 Gestion des clique sur le menu du bas
+        bottomNavigationView.setSelectedItemId(R.id.page_1);
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.page_0:
-                        Intent intent = new Intent(getApplicationContext(),Home.class);
+                        Intent intent = new Intent(getApplicationContext(), Home.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         finish();
@@ -44,12 +44,12 @@ public class Favoris extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.page_3:
-                        startActivity(new Intent(getApplicationContext(),Hotels.class));
+                        startActivity(new Intent(getApplicationContext(), Hotels.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
-                    case R.id.page_4:
-                        startActivity(new Intent(getApplicationContext(),Favoris.class));
+                    case R.id.page_5:
+                        startActivity(new Intent(getApplicationContext(), Setting.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
@@ -58,4 +58,6 @@ public class Favoris extends AppCompatActivity {
             }
         });
     }
+
+
 }

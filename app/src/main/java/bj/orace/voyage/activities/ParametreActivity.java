@@ -1,10 +1,12 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+
+import bj.orace.voyage.R;
 
 public class ParametreActivity extends AppCompatActivity {
 

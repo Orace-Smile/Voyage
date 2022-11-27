@@ -21,7 +21,7 @@
         android:theme="@style/Theme.Voyage"
         tools:targetApi="31" >
         <activity
-            android:name=".ParametreActivity"
+            android:name=".activities.ParametreActivity"
             android:exported="false"
             android:label="@string/title_activity_parametre" >
             <meta-data
@@ -29,49 +29,42 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Reservations"
+            android:name=".activities.Reservations"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Favoris"
+            android:name=".activities.Favoris"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Places"
+            android:name=".activities.Places"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Restaurants"
+            android:name=".activities.Restaurants"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Hotels"
+            android:name=".activities.Hotels"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Acceuil"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".EditionProfile"
+            android:name=".activities.EditionProfile"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -85,49 +78,42 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".CreationDeCompte"
+            android:name=".activities.Home"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Home"
+            android:name=".activities.Setting"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Setting"
+            android:name=".activities.ForgetActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ForgetActivity"
+            android:name=".activities.SignUpActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignUpActivity"
+            android:name=".activities.LoginActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

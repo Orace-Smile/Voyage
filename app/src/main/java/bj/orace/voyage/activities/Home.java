@@ -1,12 +1,8 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,22 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
+import bj.orace.voyage.R;
+
 public class Home extends AppCompatActivity {
 
-    // TODO: 25/10/2022 Declaration des variables 
-//    ImageView menu ;
-    MaterialToolbar menu;
     ImageSlider imageSlider;
-//    SearchView rechercher;
-//    SearchView searchView;
-    ListView affichageComment;
-    EditText commentInput;
-    ImageView sendComment;
+
     BottomNavigationView bottomNavigationView;
     private String item;
 
@@ -39,11 +29,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // TODO: 25/10/2022 Retrouvage des variables
-//        affichageComment = findViewById(R.id.affichageComment);
-//        commentInput = findViewById(R.id.commentInput);
-//        sendComment = findViewById(R.id.send_comment);
-//        menu = findViewById(R.id.menu);
         imageSlider =  findViewById(R.id.image_slider);
 //        ArrayList<String> arrayList = new ArrayList<>();
 //
@@ -67,7 +52,7 @@ public class Home extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.page_0);
-        menu = findViewById(R.id.menu);
+
 
         // TODO: 26/10/2022 Gestion des clique sur le menu du bas
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -81,12 +66,12 @@ public class Home extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.page_1:
-                        startActivity(new Intent(getApplicationContext(),Places.class));
+                        startActivity(new Intent(getApplicationContext(), Places.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
                     case R.id.page_2:
-                        startActivity(new Intent(getApplicationContext(),Restaurants.class));
+                        startActivity(new Intent(getApplicationContext(), Restaurants.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
@@ -95,8 +80,8 @@ public class Home extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         finish();
                         return true;
-                    case R.id.page_4:
-                        startActivity(new Intent(getApplicationContext(),Favoris.class));
+                    case R.id.page_5:
+                        startActivity(new Intent(getApplicationContext(), Setting.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
@@ -105,15 +90,6 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        // TODO: 25/10/2022 Cliaue sur le menu qui renvoie sur le Reglage
-        menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // TODO: 25/10/2022 Passage au parametre 
-                Intent intent = new Intent(getApplicationContext(),Setting.class);
-                startActivity(intent);
-            }
-        });
         // TODO: 25/10/2022 Creation du carousel pour l'acceuil 
         ArrayList<SlideModel> imagesList = new ArrayList<>();
 

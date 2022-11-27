@@ -1,4 +1,4 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             if (firebaseAuth.getCurrentUser().isEmailVerified()) {
                                 loadingDialog.stopLoading();
-                                Intent intent = new Intent(LoginActivity.this,Home.class);
+                                Intent intent = new Intent(LoginActivity.this, Home.class);
                                 startActivity(intent);
                                 finish();
                             }else {

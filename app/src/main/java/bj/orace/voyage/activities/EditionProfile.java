@@ -1,4 +1,4 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -38,6 +38,7 @@ import com.karumi.dexter.listener.single.PermissionListener;
 import java.util.HashMap;
 import java.util.Map;
 
+import bj.orace.voyage.UserModel;
 import bj.orace.voyage.constant.AllConstant;
 import bj.orace.voyage.databinding.ActivityEditionProfileBinding;
 import bj.orace.voyage.permissions.AppPermission;

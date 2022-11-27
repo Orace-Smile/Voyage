@@ -1,4 +1,4 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.progressindicator.CircularProgressIndicator;
+
+import bj.orace.voyage.R;
 
 public class MainActivity extends AppCompatActivity {
 

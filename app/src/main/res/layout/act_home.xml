@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Setting"
+    tools:context=".activities.Setting"
     android:orientation="vertical">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -111,15 +111,6 @@
                         android:layout_height="407dp"
                         android:orientation="vertical"
                         android:padding="16dp">
-
-                        <!-- Title, secondary and supporting text -->
-
-                        <!--                    <com.google.android.material.textview.MaterialTextView-->
-                        <!--                        android:id="@+id/commentView"-->
-                        <!--                        android:layout_width="match_parent"-->
-                        <!--                        android:layout_height="wrap_content"-->
-                        <!--                        android:text="Votre commentaire"-->
-                        <!--                        />-->
 
                             <ListView
                                 android:id="@+id/affichageComment"

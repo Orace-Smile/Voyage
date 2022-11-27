@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Hotels">
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="418dp"-->
-<!--        android:layout_height="183dp"-->
-<!--        android:background="@drawable/toolbar_header"-->
-<!--        tools:ignore="MissingConstraints"-->
-<!--        tools:layout_editor_absoluteX="-7dp">-->
-<!--    </androidx.appcompat.widget.Toolbar>-->
+    tools:context=".activities.Hotels">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,5 +32,7 @@
         style="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:background="#0047ab"
+        app:itemTextColor="@color/white"
         app:menu="@menu/bottom_navigtion_menu" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

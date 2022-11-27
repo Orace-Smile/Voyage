@@ -1,4 +1,4 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,24 +9,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Hotels extends AppCompatActivity {
+import bj.orace.voyage.R;
+
+public class Restaurants extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotels);
+        setContentView(R.layout.activity_restaurants);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.page_3);
+        bottomNavigationView.setSelectedItemId(R.id.page_2);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.page_0:
-                        Intent intent = new Intent(getApplicationContext(),Home.class);
+                        Intent intent = new Intent(getApplicationContext(), Home.class);
                         startActivity(intent);
                         overridePendingTransition(0,0);
                         finish();
@@ -42,12 +44,12 @@ public class Hotels extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.page_3:
-                        startActivity(new Intent(getApplicationContext(),Hotels.class));
+                        startActivity(new Intent(getApplicationContext(), Hotels.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
-                    case R.id.page_4:
-                        startActivity(new Intent(getApplicationContext(),Favoris.class));
+                    case R.id.page_5:
+                        startActivity(new Intent(getApplicationContext(), Setting.class));
                         overridePendingTransition(0,0);
                         finish();
                         return true;
@@ -56,6 +58,4 @@ public class Hotels extends AppCompatActivity {
             }
         });
     }
-
-
 }

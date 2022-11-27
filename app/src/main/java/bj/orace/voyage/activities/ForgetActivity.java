@@ -1,4 +1,4 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.os.Bundle;
 

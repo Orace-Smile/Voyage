@@ -1,4 +1,4 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -33,6 +33,8 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
+import bj.orace.voyage.UCropperActivity;
+import bj.orace.voyage.UserModel;
 import bj.orace.voyage.constant.AllConstant;
 import bj.orace.voyage.databinding.ActivitySignUpBinding;
 import bj.orace.voyage.permissions.AppPermission;
@@ -54,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         cropImage = registerForActivityResult(new ActivityResultContracts.GetContent(), result -> {
-            Intent intent = new Intent(SignUpActivity.this.getApplicationContext(),UCropperActivity.class);
+            Intent intent = new Intent(SignUpActivity.this.getApplicationContext(), UCropperActivity.class);
             intent.putExtra("SendImageData",result.toString());
             startActivityForResult(intent,100);
         });
@@ -225,11 +227,11 @@ public class SignUpActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode==100  && resultCode ==101){
             String result = data.getStringExtra("CROP");
-            Uri uri =data.getData();
+             imageUri =data.getData();
             if(result!=null){
-                uri = Uri.parse(result);
+                imageUri = Uri.parse(result);
             }
-            binding.imgPick.setImageURI(uri);
+            binding.imgPick.setImageURI(imageUri);
         }
     }
 
