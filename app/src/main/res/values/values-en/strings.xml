@@ -63,10 +63,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="title_activity_parametre">Parametre Activity</string>
+    <string name="title_activity_parametre">ParametreActivity</string>
     <string name="username">User Name</string>
-    <string name="apropos">About</string>
-    <string name="designation">Designation</string>
-    <string name="moyen_de_transfert">Transfer Mode</string>
-    <string name="montant_de_recharge">Recharge amount</string>
 </resources>

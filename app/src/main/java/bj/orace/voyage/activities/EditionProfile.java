@@ -67,6 +67,7 @@ public class EditionProfile extends AppCompatActivity {
         });
         getUserData();
 
+
         binding.circleImageView.setOnClickListener(camera ->{
             if (appPermission.isStorageOk(this)){
                 pickImage();
@@ -142,6 +143,7 @@ public class EditionProfile extends AppCompatActivity {
                     UserModel userModel = snapshot.getValue(UserModel.class);
                     binding.email.setText(userModel.getEmail());
                     binding.nom.setText(userModel.getUsername());
+                    binding.circleImageView.setImageURI(firebaseAuth.getCurrentUser().getPhotoUrl());
                 }
             }
 

@@ -1,7 +1,9 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory app:title="@string/apropos">
 
+        <Preference
+            app:title="Cette application a été développé par Orace EDJO , Justine AGBEMADON et Grace SOGLO contctez nous au +229 688 949 47"/>
         <EditTextPreference
             app:key="signature"
             app:title="@string/signature_title"
@@ -59,6 +61,7 @@
             app:summaryOff="@string/attachment_summary_off"
             app:summaryOn="@string/attachment_summary_on"
             app:title="@string/attachment_title" />
+
 
     </PreferenceCategory>
 

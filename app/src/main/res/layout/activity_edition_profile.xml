@@ -104,7 +104,7 @@
                 android:layout_marginEnd="32dp"
                 android:hint="Email"
                 app:counterEnabled="true"
-                app:counterMaxLength="20"
+                app:counterMaxLength="30"
                 app:endIconMode="clear_text"
                 app:helperText="Required*"
                 app:helperTextTextColor="@color/purple_700"
@@ -121,33 +121,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/mailInput"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:hint="Phone Number"
-                app:counterEnabled="true"
-                app:counterMaxLength="20"
-                app:endIconMode="clear_text"
-                app:helperText="Required*"
-                app:helperTextTextColor="@color/purple_700"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:startIconDrawable="@drawable/ic_baseline_phone_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/mail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:maxLength="20" />
-            </com.google.android.material.textfield.TextInputLayout>
-
             <Button
                 android:id="@+id/btn_update"
                 android:layout_width="150dp"
@@ -155,7 +128,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="0dp"
                 android:gravity="center"
-                android:text="@string/update"/>
+                android:text="@string/update"
+                android:background="#0047ab"/>
         </LinearLayout>
     </ScrollView>
     </androidx.cardview.widget.CardView>

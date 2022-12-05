@@ -75,13 +75,14 @@ public class SignUpActivity extends AppCompatActivity {
 
         binding.btnSignUp.setOnClickListener(view -> {
             if (areFieldReady()){
-                if (imageUri != null){
-                    signUp();
-                }else {
-                    Toast.makeText(this, "L'image est requise", Toast.LENGTH_SHORT).show();
-//                    startActivity(new Intent(SignUpActivity.this,Home.class));
+                if (imageUri != null) {
                     signUp();
                 }
+//                }else {
+//                    Toast.makeText(this, "L'image est requise", Toast.LENGTH_SHORT).show();
+////                    startActivity(new Intent(SignUpActivity.this,Home.class));
+//                    signUp();
+//                }
             }
         });
 
@@ -138,8 +139,8 @@ public class SignUpActivity extends AppCompatActivity {
             binding.edtPassword.setError("Ce champs est requis");
             flag = true;
             requestView =  binding.edtPassword;
-        }else if (password.length() < 8){
-            binding.edtPassword.setError("Minimum 8 caracteres");
+        }else if (password.length() < 5){
+            binding.edtPassword.setError("Minimum 5 caracteres");
             flag = true;
             requestView = binding.edtPassword;
         }
@@ -193,7 +194,7 @@ public class SignUpActivity extends AppCompatActivity {
                                                                                         @Override
                                                                                         public void onSuccess(Void unused) {
                                                                                             loadingDialog.stopLoading();
-                                                                                            Toast.makeText(SignUpActivity.this, "Verifier email", Toast.LENGTH_SHORT).show();
+                                                                                            Toast.makeText(SignUpActivity.this, "Un mail vous a été envoyé,Veuillez verifier votre mail", Toast.LENGTH_SHORT).show();
                                                                                             onBackPressed();
                                                                                         }
                                                                                     });
@@ -215,8 +216,8 @@ public class SignUpActivity extends AppCompatActivity {
                 }else {
                     // TODO: 05/11/2022 Ici on cree un utilisateur  
                     loadingDialog.stopLoading();
-                    Log.d("TAG","onComplete: Creer utilisateur"+signUp.getException());
-                    Toast.makeText(SignUpActivity.this, ""+signUp.getException(), Toast.LENGTH_SHORT).show();
+                    Log.d("TAG","onComplete: Creer utilisateur " + signUp.getException());
+                    Toast.makeText(SignUpActivity.this, "Erreur: " + signUp.getException(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -225,7 +226,7 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==100  && resultCode ==101){
+        if (requestCode == 100  && resultCode == 101){
             String result = data.getStringExtra("CROP");
              imageUri =data.getData();
             if(result!=null){

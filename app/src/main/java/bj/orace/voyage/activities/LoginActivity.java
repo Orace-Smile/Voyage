@@ -66,14 +66,14 @@ public class LoginActivity extends AppCompatActivity {
                                             Toast.makeText(LoginActivity.this, "Verifier votre email", Toast.LENGTH_SHORT).show();
                                         }else {
                                             loadingDialog.stopLoading();
-                                            Toast.makeText(LoginActivity.this, "Error:"+email.getException(), Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(LoginActivity.this, "Erreur :"+email.getException(), Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 });
                             }
                         }else {
                             loadingDialog.stopLoading();
-                            Toast.makeText(LoginActivity.this, "Error:"+task.getException(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Erreur :"+task.getException(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -95,8 +95,8 @@ public class LoginActivity extends AppCompatActivity {
             binding.edtPassword.setError("Ce champs est requis");
             flag = true;
             requestView =  binding.edtPassword;
-        }else if (password.length() < 8){
-            binding.edtPassword.setError("Minimum 8 caracteres");
+        }else if (password.length() < 5){
+            binding.edtPassword.setError("Minimum 5 caracteres");
             flag = true;
             requestView = binding.edtPassword;
         }

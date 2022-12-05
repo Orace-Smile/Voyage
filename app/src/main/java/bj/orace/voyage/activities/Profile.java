@@ -1,7 +1,9 @@
-package bj.orace.voyage;
+package bj.orace.voyage.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,17 +18,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import bj.orace.voyage.UserModel;
 import bj.orace.voyage.databinding.ActivityProfileBinding;
+import bj.orace.voyage.utility.LoadingDialog;
 
 public class Profile extends AppCompatActivity {
     private ActivityProfileBinding binding;
     protected final int REQUEST_CODE_PROFILE = 1236;
     private ImageView back;
     private FirebaseAuth firebaseAuth;
+    LoadingDialog loadingDialog;
     private ImageView imageView;
     private TextInputEditText txtName;
     private TextInputEditText txtEmail;
     private TextView textView,txtChanel;
+    Button btn_update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,8 @@ public class Profile extends AppCompatActivity {
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         back = binding.imageBack;
+
+        btn_update = binding.btnUpdate;
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,13 +51,21 @@ public class Profile extends AppCompatActivity {
         });
 
         firebaseAuth = FirebaseAuth.getInstance();
+        loadingDialog = new LoadingDialog(this);
         txtName = binding.edittextName;
         txtEmail = binding.edittextEmail;
         textView = binding.textviewFullname;
-        txtChanel = binding.textviewChannel;
+
         imageView = binding.imageProfile;
 
         getUserData();
+
+        btn_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),EditionProfile.class));
+            }
+        });
     }
 
 
@@ -65,8 +81,7 @@ public class Profile extends AppCompatActivity {
                     txtEmail.setText(userModel.getEmail());
                     txtName.setText(userModel.getUsername());
                     textView.setText(userModel.getUsername());
-//                    ImageView.setImageDrawable(userModel.getImage());
-                    txtChanel.setText("");
+                    imageView.setImageURI(firebaseAuth.getCurrentUser().getPhotoUrl());
                 }
             }
 

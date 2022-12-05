@@ -3,6 +3,7 @@ package bj.orace.voyage.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class Home extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     private String item;
+    private ListView listView;
 
 
     @Override
@@ -30,9 +32,14 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         imageSlider =  findViewById(R.id.image_slider);
-//        ArrayList<String> arrayList = new ArrayList<>();
+
+//        listView = findViewById(R.id.post_list);
+
+
+//        ArrayList<Post> arrayList = new ArrayList<>();
 //
 //        ArrayAdapter arrayAdapter =  new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1,arrayList);
+//        listView.setAdapter(arrayAdapter);
 
 //        sendComment.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -108,5 +115,8 @@ public class Home extends AppCompatActivity {
         imagesList.add(new SlideModel("https://imgs.search.brave.com/-Wmaf3A34mcP9o1ucEIaiex4IHpEAc_fVTb1ews65wY/rs:fit:780:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5a/bVI5YzR0Si00RVJj/bE1qLU5pM1ZRSGFF/ZyZwaWQ9QXBp","En famille aussi",null));
         imagesList.add(new SlideModel("https://imgs.search.brave.com/QBULfTm15_suunP_IqgpzrZZ2sHgX_3Ea2ocdM1RpPQ/rs:fit:759:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4w/a3UxQXZVb19fLW9o/eEg0RXFUWE9BSGFF/byZwaWQ9QXBp","Vacances guidjooo",null));
         imageSlider.setImageList(imagesList, ScaleTypes.CENTER_CROP);
+
+
+
     }
 }

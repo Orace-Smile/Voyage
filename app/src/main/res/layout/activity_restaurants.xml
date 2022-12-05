@@ -7,6 +7,26 @@
     android:accessibilityPaneTitle="Restaurants"
     android:orientation="vertical"
     tools:context=".activities.Restaurants">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0047ab">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/seach"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:hint="@string/restaut"
+            android:padding="10dp"
+            app:layout_anchor="@+id/scrollView2"
+            app:layout_anchorGravity="center" />
+    </androidx.appcompat.widget.Toolbar>
+
 
 
 

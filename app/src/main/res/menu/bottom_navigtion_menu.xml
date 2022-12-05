@@ -27,12 +27,6 @@
         android:icon="@drawable/ic_baseline_night_shelter_24"
         android:iconTint="@color/white"
         android:title="@string/hotel"/>
-<!--    <item-->
-<!--        android:id="@+id/page_4"-->
-<!--        android:enabled="true"-->
-<!--        android:icon="@drawable/ic_baseline_favorite_24"-->
-<!--        android:title="@string/favorites"-->
-<!--        />-->
     <item
         android:id="@+id/page_5"
         android:enabled="true"

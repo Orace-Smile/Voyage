@@ -18,18 +18,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         ImageView app_image = (ImageView) findViewById(R.id.app_image);
         CircularProgressIndicator loader = (CircularProgressIndicator) findViewById(R.id.loader);
 
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
+//                if (){
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
+//                }
             }
         };
         new Handler().postDelayed(runnable,1000);
 
+    }
+
+    public boolean isFirstConnexion(){
+
+        return true;
     }
 }

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primaryColor"
     tools:context=".activities.ForgetActivity">
 
     <ImageView
@@ -26,18 +25,24 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:backgroundTint="@color/white"
-            android:hint="@string/email"
-            android:drawableStart="@drawable/email_icon"
-            android:drawableTint="@color/white"
-            android:drawablePadding="10dp"
-            android:textColor="@color/white"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"/>
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="@color/white"
+                android:hint="@string/email"
+                android:drawableStart="@drawable/email_icon"
+                android:drawableTint="@color/white"
+                android:drawablePadding="10dp"
+                android:textColor="@color/white"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnForgetPassword"
             android:layout_width="match_parent"
@@ -46,7 +51,7 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="10dp"
             android:text="@string/send_email"
-            android:backgroundTint="@color/primaryColor"
+            android:backgroundTint="@color/colorAccent"
             android:textStyle="bold"
             app:cornerRadius="20dp"
             app:elevation="10dp"/>

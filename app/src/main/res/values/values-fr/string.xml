@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Voyage +</string>
+    <string name="title_activity_login">Connexion</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">CONNEXION</string>
+    <string name="action_sign_in_short">Se connecter</string>
+    <string name="welcome">"Bienvenue !"</string>
+    <string name="invalid_username">Nom d'utilisateur invalid</string>
+    <string name="invalid_password">Le Mot de passe doit être > 5 caractères</string>
+    <string name="login_failed">"Connexion impossible"</string>
+    <string name="name">Nom</string>
+    <string name="search_label">Rechercher</string>
+    <string name="search_hint">Touver quelques choses</string>
+    <string name="menu">Menu</string>
+    <string name="param_tres">Paramètres</string>
+    <string name="langues">Langues</string>
+    <string name="creer_un_compte">CREER UN COMPT</string>
+    <string name="subscribe_the_channel">S'abonner</string>
+    <string name="full_name">Nom</string>
+    <string name="Full_name">Nom</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Numero de Télephone</string>
+    <string name="password">Mot de passe</string>
+    <string name="update">Mettre à jour</string>
+    <string name="favorites">Favoris</string>
+    <string name="post_price">Prix</string>
+    <string name="post_name">Le nom </string>
+    <string name="description">La descriptions</string>
+    <string name="setting">Paramètres</string>
+    <string name="restaut">Restos</string>
+    <string name="places">Places</string>
+    <string name="hotel">Hotels</string>
+    <string name="home">Accueil</string>
+    <string name="seacher">Rechercher quelque chose</string>
+    <string name="lieu">Lieux</string>
+    <string name="acceuil">Accueil</string>
+    <string name="content_description_media">Restaurant</string>
+    <string name="title">Populaire</string>
+    <string name="secondary_text">Voyagez partout dans le monde</string>
+    <string name="supporting_text">Un bon moment</string>
+    <string name="action_1">Commenter</string>
+    <string name="action_2">J'aime</string>
+    <string name="page_title">Accueil</string>
+    <string name="send_email">Envoyer</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="mot_de_passe_oublie">Mot de passe oublié</string>
+    <string name="connexion">Connecter</string>
+    <string name="login_string">Connexion</string>
+    <string name="title_activity_parametres">Paramètres</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Synchroniser</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Synchroniser email périodiquement</string>
+    <string name="attachment_title">Téléchargement venant des sources inconnues</string>
+    <string name="attachment_summary_on">Téléchargement automatique des emails
+    </string>
+    <string name="attachment_summary_off">Téléchargement manuel</string>
+    <string name="title_activity_parametre">Paramètre</string>
+    <string name="username">Nom d'utilisateur</string>
+    <string name="apropos">À Propos</string>
+     <string name="moyen_de_transfert">Mode de Transfert</string>
+    <string name="montant_de_recharge">Montant de Recharge</string>
+    https://www.youtube.com/watch?v=-lTmY3Lf3oQ&t=338s
+</resources>
